@@ -14,6 +14,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+<!-- Icon CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <style>
     .poppins-regular {
   font-family: "Poppins", sans-serif;
@@ -28,6 +31,53 @@
 <body class="poppins-regular" >
 
 
+<!-- NavBar Start -->
+ <nav class="fixed top-0 left-0 w-full bg-[#EDEDED] border-b border-[#C6BDBD] flex justify-between items-center py-[1.4rem] px-[4rem] z-10">
+
+    <div class="flex items-center">
+        <span class="text-xl font-semibold">English</span>
+      <img src="./assets/logo.png" alt="Logo" class="h-8 mr-2">
+      <span class="text-xl ">জানালা</span>
+    </div>
+
+    <div class="space-x-4">
+    
+<button 
+onclick="document.getElementById('FAQ_Section').scrollIntoView({ behavior : 'smooth'})"
+class="btn btn-outline btn-primary ">
+    <i class="fas fa-question-circle mr-1"></i> FAQ
+</button>
+
+<button
+onclick="document.getElementById('Vocabulary_Section').scrollIntoView({ behavior : 'smooth'})" 
+class="btn btn-outline btn-primary">
+    <i class="fas fa-book mr-1"></i> Learn
+</button>
+
+<button class="btn btn-outline btn-primary">
+    <i class="fas fa-sign-out-alt mr-1"></i> Logout
+</button>
+
+</div>
+</nav>
+<!-- NavBar End -->
+
+
+<div class="mt-20 p-4">
+
+<!--  -->
+    <section id="Vocabulary_Section"  class="h-screen">
+      <h2>Vocabulary Section</h2>
+      
+    </section>
+
+    <section id="FAQ_Section"  class="h-screen">
+      <h2>FAQ Section</h2>
+      
+    </section>
+
+</div>
+  
 
     <script src="./JS/js.js"></script>
 </body>
