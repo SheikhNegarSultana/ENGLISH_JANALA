@@ -93,8 +93,39 @@ class="btn btn-outline btn-primary">
       
     </section>
 
-    <section id="FAQ_Section"  class="h-screen">
-      <h2>FAQ Section</h2>
+<section id="FAQ_Section"  class=" h-[33.8rem]">
+      <h2 class=" text-center font-bold text-[2.1rem]"> <span class="text-[#00BCFF]">Frequently</span> Asked Questions</h2>
+
+<div class="flex flex-col gap-[1rem] mx-[4rem]">
+
+<div class="collapse mt-[3rem] collapse-plus bg-[#F8F8F8] border border-base-300">
+  <input placeholder="#" type="radio" name="my-accordion-3" checked="checked" />
+  <div class="collapse-title font-semibold">What is the difference between var, let, and const?</div>
+  <div class="collapse-content text-sm">The difference between var, let, and const in JavaScript lies in their scope and behavior. var is function-scoped, hoisted, and allows redeclaration and reassignment, potentially causing variable leakage. let is block-scoped, hoisted but not initialized (temporal dead zone), and allows reassignment but not redeclaration in the same scope. const is block-scoped, hoisted but not initialized, prevents reassignment (though object properties can be mutated), and requires immediate initialization.</div>
+</div>
+
+<div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+  <input placeholder="#" type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">What is the difference between map(), forEach(), and filter()?</div>
+  <div class="collapse-content text-sm">When comparing map(), forEach(), and filter(), each serves a distinct purpose in array manipulation. The map() method creates a new array by applying a function to each element, returning a new array of the same length. The forEach() method executes a function for each element without returning a new array, instead returning undefined. The filter() method, however, creates a new array containing only the elements that pass a given test function, effectively returning a subset of the original array.</div>
+</div>
+<div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+  <input placeholder="#" type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">What are arrow functions and how are they different from regular functions?</div>
+  <div class="collapse-content text-sm">Arrow functions, introduced in modern JavaScript, differ from regular functions in several ways. Arrow functions use a concise syntax (() => {}) and lexically bind this to the enclosing scope, lacking their own arguments object and the ability to be used as constructors. Regular functions, defined with the function keyword, have a this value determined by how they are called, include an arguments object, and can be used with the new keyword for constructor purposes.</div>
+</div>
+<div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+  <input placeholder="#" type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">How do JavaScript Promises work?</div>
+  <div class="collapse-content text-sm">JavaScript Promises are a powerful tool for handling asynchronous operations. A Promise is an object representing a future value or error, existing in one of three states: pending (initial), fulfilled (success), or rejected (failure). Created using new Promise((resolve, reject) => {}), where resolve sets the value and reject sets the error, Promises enable asynchronous flow control through methods like .then() for handling fulfilled values, .catch() for errors, and .finally() for code that runs regardless of the outcome.</div>
+</div>
+<div class="collapse collapse-plus bg-[#F8F8F8] border border-base-300">
+  <input placeholder="#" type="radio" name="my-accordion-3" />
+  <div class="collapse-title font-semibold">How do closures work in JavaScript?</div>
+  <div class="collapse-content text-sm">Closures in JavaScript occur when an inner function retains access to the outer function's scope even after the outer function has finished executing. This happens when a function is returned or passed with references to variables from its outer scope, as seen in an example like function outer() { let x = 10; return function inner() { return x; }; }, where inner closes over x to preserve its value. Closures are widely used for data privacy, maintaining state, or creating function factories, making them a fundamental concept in JavaScript programming.</div>
+</div>
+
+</div>
       
     </section>
 
