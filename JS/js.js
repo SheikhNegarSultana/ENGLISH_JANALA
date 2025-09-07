@@ -61,7 +61,7 @@ function showVocabularyCard(cardDataById){
 <div class="text-center">
             <h1 class="text-xl font-bold text-gray-900">${a.word}</h1>
             <p class="text-sm font-medium text-gray-500 mt-2">Meaning / Pronunciation</p>
-            <h2 class="text-gray-800 font-semibold text-lg mt-4">"${a.meaning} / ${a.pronunciation}"</h2>
+            <h2 class="text-gray-800 font-semibold text-lg mt-4">"${a.meaning === null ? "অর্থ নেই" : a.meaning } / ${a.pronunciation}"</h2>
             <div class=" mt-[2rem] flex justify-between gap-4 ">
                 <button onclick="vocabulary_details_byID(${a.id})" type="button" class="btn w-10 h-10 flex items-center justify-center bg-[#E9F4FF] rounded-lg hover:bg-blue-200" aria-label="Info">
                     <i class="fas fa-info-circle text-[#374957]"></i>
@@ -122,10 +122,10 @@ function vocabulary_details_modal(details){
     </div>
 
     <p class="font-semibold text-[#292524]">Meaning</p>
-    <p class="text-gray-700 mb-4">${details.meaning}</p>
+    <p class="text-gray-700 mb-4">${details.meaning  === null ? "অর্থ পাওয়া যায় নি" : details.meaning}</p>
 
     <p class="font-semibold text-[#292524]">Example</p>
-    <p class="text-gray-700 mb-4">${details.example}</p>
+    <p class="text-gray-700 mb-4">${details.example === undefined ? "উদাহরণ নেই" : details.example }</p>
 
     <p class="font-semibold text-[#292524]">সমার্থক শব্দ গুলো</p>
     <div class="flex gap-2 flex-wrap mt-2 mb-5">
