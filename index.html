@@ -23,6 +23,11 @@
   font-weight: 400;
   font-style: normal;
 }
+
+.active{
+  background: #422AD5;
+  color: white;
+}
 </style>
 
 
@@ -87,13 +92,54 @@ class="btn btn-outline btn-primary">
 
 <div class="mt-20 p-4">
 
-<!--  -->
-    <section id="Vocabulary_Section"  class="h-screen">
-      <h2>Vocabulary Section</h2>
-      
-    </section>
+<!-- Learn Vocabularies Section Start -->
+    <section id="Vocabulary_Section"  class="h-auto py-[6.2rem]">
 
-<section id="FAQ_Section"  class=" h-[33.8rem]">
+    <h2 class=" text-center font-bold text-[2.1rem]"> <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h2>
+    
+  <!-- Level Button Div -->
+    <div id="levelButtons" class=" flex justify-between mx-[10rem] mt-[2.4rem]">
+
+      
+    </div>
+<!-- Level Button Div Done-->
+
+<!-- Default Show and Card Show Start -->
+
+<div id="showVocabularyCards" class="bg-[#F8F8F8] rounded-lg text-center mt-[2rem] p-[4rem] grid grid-cols-3 gap-6">
+
+    <div class="col-span-full flex flex-col items-center justify-center">
+        <p class="text-[#79716B] font-normal text-[0.8rem] mb-[0.7rem]">আপনি এখনো কোন Lesson Select করেন নি</p>
+        <h2 class="text-xl text-[#292524] font-semibold">একটি Lesson Select করুন।</h2>
+    </div>
+
+</div>
+
+<!-- Default Show and Card Show End -->
+
+
+
+
+
+<!-- <div id="noContentDiv" class="  flex-col items-center text-center ">
+
+  <img src="./assets/alert-error.png" alt="" srcset="">
+  <p class="text-[#79716B] font-normal text-[0.8rem] mb-[0.7rem]">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+  <h2 class="text-xl text-[#292524] font-semibold">নেক্সট Lesson এ যান</h2>
+
+ </div> -->
+
+
+
+
+
+</div>
+
+    </section>
+<!-- Learn Vocabularies Section Done -->
+
+
+<section id="FAQ_Section"  class="h-auto py-[6.2rem]">
       <h2 class=" text-center font-bold text-[2.1rem]"> <span class="text-[#00BCFF]">Frequently</span> Asked Questions</h2>
 
 <div class="flex flex-col gap-[1rem] mx-[4rem]">
@@ -131,7 +177,7 @@ class="btn btn-outline btn-primary">
 
 </div>
   
-<footer class="bg-white border-t border-[#C6BDBD] px-[4rem] p-4 flex justify-between items-center">
+<footer class="bg-white  border-t border-[#C6BDBD] px-[4rem] p-4 flex justify-between items-center">
     <div>
       <img src="./assets/footer.png" alt="English Logo" class="h-[2rem] inline-block mr-2">
       <p class="text-[1rem] mt-[1rem] font-medium">ইংরেজি শিখুন সহজে</p>
