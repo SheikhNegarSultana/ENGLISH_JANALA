@@ -93,7 +93,7 @@ class="btn btn-outline btn-primary">
 <div class="mt-20 p-4">
 
 <!-- Learn Vocabularies Section Start -->
-    <section id="Vocabulary_Section"  class="h-auto py-[6.2rem] hidden">
+<section id="Vocabulary_Section"  class="h-auto py-[6.2rem] hidden">
 
     <h2 class=" text-center font-bold text-[2.1rem]"> <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h2>
     
@@ -104,9 +104,15 @@ class="btn btn-outline btn-primary">
     </div>
 <!-- Level Button Div Done-->
 
+<!-- loader Start -->
+<div id="loader" class=" bg-[#F8F8F8] rounded-lg text-center mt-[2rem] p-[4rem]   hidden">
+  <span class="loading loading-dots loading-xl"></span>
+</div>
+<!-- loader Done -->
+
 <!-- Default Show and Card Show Start -->
 
-<div id="showVocabularyCards" class="bg-[#F8F8F8] rounded-lg text-center mt-[2rem] p-[4rem] grid grid-cols-3 gap-6">
+<div id="showVocabularyCards" class=" bg-[#F8F8F8] rounded-lg text-center mt-[2rem] p-[4rem] grid grid-cols-3 gap-6 ">
 
     <div class="col-span-full flex flex-col items-center justify-center">
         <p class="text-[#79716B] font-normal text-[0.8rem] mb-[0.7rem]">আপনি এখনো কোন Lesson Select করেন নি</p>
@@ -175,7 +181,6 @@ class="btn btn-outline btn-primary">
 </div>
  
 
-
   
 <footer class="bg-white  border-t border-[#C6BDBD] px-[4rem] p-4 flex justify-between items-center">
     <div>
@@ -199,6 +204,10 @@ class="btn btn-outline btn-primary">
     </div>
     </div>
   </footer>
+
+
+
+  
 
 
     <script src="./JS/login.js"></script>

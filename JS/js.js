@@ -38,16 +38,24 @@ levelButtons()
 
 // Vocabulary Section 
 function levelById(id){
+    showLoader()
     fetch(`https://openapi.programming-hero.com/api/level/${id}`)
     .then(res=>res.json())
-    .then( data => showVocabularyCard(data.data))
+    .then( data => 
+      setTimeout(() =>{
+        showVocabularyCard(data.data)
+      }, 1000)
+      
+    )
 }
 
 
 function showVocabularyCard(cardDataById){
     const showVocabularyCards = document.getElementById('showVocabularyCards')
+    
     showVocabularyCards.innerHTML = ""
 
+   
     if(cardDataById.length > 0){
 
     cardDataById.map( a => {
@@ -91,10 +99,9 @@ showVocabularyCards.appendChild(div)
 showVocabularyCards.appendChild(divNoContent)
 
     }
-
+hideLoader()
 
 }
-
 
 
 // Vocabulary Details
@@ -142,4 +149,16 @@ function vocabulary_details_modal(details){
 
 document.getElementById("word_modal").showModal();
 
+}
+
+
+
+function showLoader(){
+  document.getElementById('loader').classList.remove('hidden')
+  document.getElementById('showVocabularyCards').classList.add('hidden')
+}
+
+function hideLoader(){
+    document.getElementById('loader').classList.add('hidden')
+  document.getElementById('showVocabularyCards').classList.remove('hidden')
 }
