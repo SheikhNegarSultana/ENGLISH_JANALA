@@ -49,6 +49,13 @@ function levelById(id){
     )
 }
 
+// Pronounce Word English
+ function pronounceWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US'; 
+      window.speechSynthesis.speak(utterance);
+    }
+
 
 function showVocabularyCard(cardDataById){
     const showVocabularyCards = document.getElementById('showVocabularyCards')
@@ -74,7 +81,9 @@ function showVocabularyCard(cardDataById){
                 <button onclick="vocabulary_details_byID(${a.id})" type="button" class="btn w-10 h-10 flex items-center justify-center bg-[#E9F4FF] rounded-lg hover:bg-blue-200" aria-label="Info">
                     <i class="fas fa-info-circle text-[#374957]"></i>
                 </button>
-                <button type="button" class="btn w-10 h-10 flex items-center justify-center bg-[#E9F4FF] rounded-lg hover:bg-blue-200" aria-label="Volume">
+                <button 
+                onclick="pronounceWord('${a.word}')" 
+                 type="button" class="btn w-10 h-10 flex items-center justify-center bg-[#E9F4FF] rounded-lg hover:bg-blue-200" aria-label="Volume">
                     <i class="fas fa-volume-up text-[#374957]"></i>
                 </button>
             </div>
@@ -121,7 +130,7 @@ function vocabulary_details_modal(details){
       <h2 class="text-xl font-bold text-[#292524]">${details.word}</h2>
       <span class="text-gray-500 text-lg">${details.pronunciation}</span>
 
-      <button onclick="new Audio('${details.audio}').play()"
+      <button onclick="pronounceWord('${details.word}')" 
               class="ml-1 p-1.5 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700"
               aria-label="Play pronunciation" type="button">
         <i class="fa-solid fa-volume-high"></i>
