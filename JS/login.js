@@ -5,32 +5,38 @@ const NavBar = document.getElementById('NavBar')
 const login_btn = document.getElementById('login_btn')
 const logout = document.getElementById('logout')
 
-login_btn.addEventListener('click', ()=>{
+login_btn.addEventListener('click', () => {
     const user_Name = document.getElementById('name').value
     const password = document.getElementById('password').value
 
-    if( user_Name.length === 0){
+    if (user_Name.length === 0) {
         alert("Enter Your name")
     }
 
-    if( password === '123456'){
-        alert("Login successful!")
+    if (password === '123456') {
+
+        Swal.fire({
+            title: "Logged In!",
+            icon: "success",
+            draggable: true
+        });
+        
         Vocabulary_Section.classList.remove('hidden')
         FAQ_Section.classList.remove('hidden')
         NavBar.classList.remove('hidden')
         banner.classList.add('hidden')
 
     }
-    else{
+    else {
         alert(" Use this Password : 123456")
     }
-  
+
 })
 
-logout.addEventListener('click',()=>{
+logout.addEventListener('click', () => {
     NavBar.classList.add('hidden')
     Vocabulary_Section.classList.add('hidden')
     FAQ_Section.classList.add('hidden')
     banner.classList.remove('hidden')
-    
+
 })
